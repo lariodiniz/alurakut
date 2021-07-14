@@ -10,7 +10,7 @@ import OrkutNostalgicIconSet from '../components/orkutNostalgicIconSet';
 
 function Main() {
     let githubUser = 'lariodiniz';
-    let pessoasFavoritas = ['juunegreiros', 'omariosouto', 'peas', 'rafaballerini', 'marcobrunidev', 'felipefialho']
+    let pessoasFavoritas = ['juunegreiros', 'omariosouto', 'peas', 'rafaballerini', 'marcobrunodev', 'felipefialho']
   return (
       <>
         <Menu githubUser={githubUser}/>
@@ -36,11 +36,11 @@ function Main() {
                     {
                         pessoasFavoritas.map((pessoa) =>{
                             return (
-                                <li>
-                                <a href={`/users/${pessoa}`}  key={pessoa}>
-                                    <img src={`https://github.com/${pessoa}.png`} />
-                                    <span>{pessoa}</span>
-                                </a>
+                                <li key={pessoa}>
+                                    <a href={`/users/${pessoa}`}  >
+                                        <img alt={`foto de ${pessoa}`} src={`https://github.com/${pessoa}.png`} />
+                                        <span>{pessoa}</span>
+                                    </a>
                                 </li>
                             )
                         })
