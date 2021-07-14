@@ -1,0 +1,147 @@
+.menuHeader {
+  width: 100%;
+  background-color: #308bc5;
+}
+
+.menuProfileSidebar {
+  background: white;
+  position: fixed;
+  z-index: 100;
+  padding: 46px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 48px;
+  transition: 0.3s;
+  pointer-events: "all";
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menuProfileSidebarClose {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(calc(-100% - 48px));
+}
+
+.menuProfileSidebarClose div {
+  max-width: 400px;
+  margin: auto;
+}
+
+.menuProfileSidebarClose a {
+  font-size: 18px;
+}
+
+.menuBoxLink {
+  font-size: 18px;
+  color: #2e7bb4;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.menuProfileSidebarClose hr {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  border-color: transparent;
+  border-bottom-color: #ecf2fa;
+}
+.menuContainer {
+  background-color: #308bc5;
+  padding: 7px 16px;
+  max-width: 1110px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 101;
+}
+
+.menuContainer nav {
+  display: none;
+}
+
+.menuContainer a {
+  font-size: 12px;
+  color: white;
+  padding: 10px 16px;
+  position: relative;
+  text-decoration: none;
+}
+
+.menuContainer a:after {
+  content: " ";
+  background-color: #5292c1;
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 12px;
+  margin: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.menuContainer input {
+  color: #ffffff;
+  background: #5579a1;
+  padding: 10px 42px;
+  border: 0;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  border-radius: 1000px;
+  font-size: 12px;
+}
+
+.menuContainer input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.menuContainer button {
+  border: 0;
+  background: transparent;
+  align-self: center;
+  display: inline-block;
+}
+
+.menuLogo {
+  background-color: #ffffff;
+  padding: 9px 14px;
+  border-radius: 1000px;
+  height: 34px;
+}
+
+.menuDefault a {
+  font-size: 12px;
+  color: #2e7bb4;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.menuDefault a img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+@media (min-width: 860px) {
+  .menuProfileSidebarClose {
+    display: none;
+  }
+
+  .menuContainer {
+    justify-content: flex-start;
+  }
+  .menuContainer button {
+    display: none;
+  }
+
+  .menuContainer nav {
+    display: flex;
+  }
+}
