@@ -2,8 +2,10 @@ import './box.css'
 
 function Box(props) {
 
+  let othersClass = props.class? props.class : '';
+
     return (
-      <div className={`box ${props.class}`}>{props.children}</div>
+      <div className={`box ${othersClass}`}>{props.children}</div>
     );
   }
   

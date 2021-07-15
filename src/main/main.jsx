@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import './main.css'
 
 import Box from '../components/box'
@@ -6,16 +8,23 @@ import Grid from '../components/grid'
 import Menu from '../components/menu';
 import ProfileSideBar from '../components/profileSideBar';
 import OrkutNostalgicIconSet from '../components/orkutNostalgicIconSet';
+import ComunidadeForm from './../components/comunidadeForm';
+
+import background from '../imgs/background.jpg'
+
 
 
 function Main() {
     let githubUser = 'lariodiniz';
-    let pessoasFavoritas = ['juunegreiros', 'omariosouto', 'peas', 'rafaballerini', 'marcobrunodev', 'felipefialho']
+    let pessoas = ['juunegreiros', 'omariosouto', 'peas', 'rafaballerini', 'marcobrunodev', 'felipefialho'];
+    let pessoasFavoritas = pessoas.map((pessoa)=> { return {key: pessoa, title:pessoa, image:`https://github.com/${pessoa}.png`, url:`/users/${pessoa}`}})
+    let [comunidades, setComunidades] = useState([{key: '1', title:'Eu odeio acordar cedo', image:`https://alurakut.vercel.app/capa-comunidade-01.jpg`, url:`https://alurakut.vercel.app/`}]);
+
   return (
-      <>
+      <div className="site" style={{ backgroundImage: `url(${background})` }}>
         <Menu githubUser={githubUser}/>
-        <Grid>
-            <div style={{gridArea: "profileArea"}}>
+        <Grid >
+            <div className="profileArea" style={{gridArea: "profileArea"}}>
                     <ProfileSideBar githubUser={githubUser}/>
             </div>
             <div className="welcomeArea" style={{gridArea: "welcomeArea"}}>
@@ -25,32 +34,18 @@ function Main() {
                     </h1>
                     <OrkutNostalgicIconSet />
                 </Box>
+                <Box>
+                    <h2 className="boxSubTitle">O que você deseja fazer?</h2>
+                    <ComunidadeForm comunidades={comunidades} setComunidades={setComunidades}/>
+                </Box>
             </div>
             <div className="profileRelationsArea" style={{gridArea: "profileRelationsArea"}}>
-                <ProfileRelations >
-                    <h2 className="smallTitle">
-                        Pessoas da Comunidade  ({pessoasFavoritas.length})
-                    </h2>
-                    
-                    <ul>
-                    {
-                        pessoasFavoritas.map((pessoa) =>{
-                            return (
-                                <li key={pessoa}>
-                                    <a href={`/users/${pessoa}`}  >
-                                        <img alt={`foto de ${pessoa}`} src={`https://github.com/${pessoa}.png`} />
-                                        <span>{pessoa}</span>
-                                    </a>
-                                </li>
-                            )
-                        })
-                    }
-                    </ul>
-
-                </ProfileRelations>
+                <ProfileRelations title="Comunidades" list={comunidades} />
+                <ProfileRelations  title="Pessoas da Comunidade" list={pessoasFavoritas} />
+                
             </div>
         </Grid>
-      </>
+      </div>
   );
 }
 

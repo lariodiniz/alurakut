@@ -1,6 +1,6 @@
 .menuHeader {
   width: 100%;
-  background-color: #308bc5;
+  background-color: #160f21;
 }
 
 .menuProfileSidebar {
@@ -24,18 +24,18 @@
   transform: translateY(calc(-100% - 48px));
 }
 
-.menuProfileSidebarClose div {
+.menuProfileSidebar div {
   max-width: 400px;
   margin: auto;
 }
 
-.menuProfileSidebarClose a {
+.menuProfileSidebar a {
   font-size: 18px;
 }
 
 .menuBoxLink {
   font-size: 18px;
-  color: #2e7bb4;
+  color: #0e0c1f;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 800;
@@ -45,10 +45,10 @@
   margin-top: 12px;
   margin-bottom: 8px;
   border-color: transparent;
-  border-bottom-color: #ecf2fa;
+  border-bottom-color: #160f21;
 }
 .menuContainer {
-  background-color: #308bc5;
+  background-color: #160f21;
   padding: 7px 16px;
   max-width: 1110px;
   margin: auto;
@@ -62,7 +62,7 @@
   display: none;
 }
 
-.menuContainer a {
+.menuContainer nav a {
   font-size: 12px;
   color: white;
   padding: 10px 16px;
@@ -70,9 +70,9 @@
   text-decoration: none;
 }
 
-.menuContainer a:after {
+.menuContainer nav a:after {
   content: " ";
-  background-color: #5292c1;
+  background-color: #000;
   display: block;
   position: absolute;
   width: 1px;
@@ -85,7 +85,7 @@
 
 .menuContainer input {
   color: #ffffff;
-  background: #5579a1;
+  background: #885b80;
   padding: 10px 42px;
   border: 0;
   background-position: 15px center;
@@ -113,9 +113,9 @@
   height: 34px;
 }
 
-.menuDefault a {
+.menuDefault nav a {
   font-size: 12px;
-  color: #2e7bb4;
+  color: #2f2644;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -123,7 +123,7 @@
   text-decoration: none;
 }
 
-.menuDefault a img {
+.menuDefault nav a img {
   width: 16px;
   height: 16px;
   margin-right: 5px;

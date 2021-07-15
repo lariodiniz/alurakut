@@ -1,0 +1,15 @@
+.profileSidebarMenuDefaulf a {
+  font-size: 12px;
+  color: #13061f;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.profileSidebarMenuDefaulf a img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}

@@ -6,7 +6,7 @@
 }
 .boxLink {
   font-size: 14px;
-  color: #2e7bb4;
+  color: #885b80;
   text-decoration: none;
   font-weight: 800;
 }
@@ -25,7 +25,7 @@
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 700;
-  color: #333333;
+  color: #371a38;
   margin-bottom: 20px;
 }
 .box hr {
@@ -36,7 +36,7 @@
 }
 .box input {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: #faa991;
   color: #333333;
   border: 0;
   padding: 14px 16px;
@@ -53,5 +53,5 @@
   padding: 8px 12px;
   color: #ffffff;
   border-radius: 10000px;
-  background-color: #6f92bb;
+  background-color: #88392a;
 }

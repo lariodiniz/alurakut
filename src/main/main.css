@@ -10,8 +10,16 @@ img {
   display: block;
 }
 body {
-  background-color: #d9e6f6;
+  background-color: #221114;
   font-family: sans-serif;
+}
+
+h1 {
+  color: #161121;
+}
+
+h2 {
+  color: #161121;
 }
 
 *::-webkit-scrollbar {
@@ -78,4 +86,10 @@ input:hover {
 
 input:focus {
   box-shadow: 0px 0px 5px #33333357;
+}
+
+.site {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
